@@ -1,0 +1,209 @@
+# ===============================
+# ENVIRONMENT
+# ===============================
+[env]
+TERM = "xterm-256color"
+WINIT_X11_SCALE_FACTOR = "1"
+
+# ===============================
+# WINDOW
+# ===============================
+[window]
+dynamic_padding = true
+decorations = "full"
+title = "Alacritty@CachyOS"
+opacity = 0.85
+decorations_theme_variant = "Dark"
+
+[window.dimensions]
+columns = 110
+lines = 32
+
+[window.padding]
+x = 10
+y = 10
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+# ===============================
+# SCROLLING
+# ===============================
+[scrolling]
+history = 15000
+multiplier = 3
+
+# ===============================
+# COLORS (LOG-OPTIMIZED DARK)
+# ===============================
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#0f1419"
+foreground = "#d0d7de"
+
+[colors.cursor]
+text = "#0f1419"
+cursor = "#a6e3a1"
+
+[colors.selection]
+text = "#d0d7de"
+background = "#2a2f3a"
+
+# ---- NORMAL COLORS ----
+[colors.normal]
+black   = "#2a2f3a"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#bac2de"
+
+# ---- BRIGHT COLORS ----
+[colors.bright]
+black   = "#3b4252"
+red     = "#f38ba8"
+green   = "#a6e3a1"
+yellow  = "#f9e2af"
+blue    = "#89b4fa"
+magenta = "#cba6f7"
+cyan    = "#94e2d5"
+white   = "#ffffff"
+
+# ===============================
+# FONT
+# ===============================
+[font]
+size = 12.5
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Bold Italic"
+
+# ===============================
+# SELECTION
+# ===============================
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+# ===============================
+# CURSOR
+# ===============================
+[cursor]
+style = "Underline"
+vi_mode_style = "Block"
+unfocused_hollow = true
+thickness = 0.18
+
+# ===============================
+# MOUSE
+# ===============================
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+mouse = "Middle"
+action = "PasteSelection"
+
+# ===============================
+# KEYBOARD
+# ===============================
+[keyboard]
+
+[[keyboard.bindings]]
+key = "Paste"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "Copy"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+action = "ClearLogNotice"
+
+[[keyboard.bindings]]
+key = "L"
+mods = "Control"
+mode = "~Vi"
+chars = "\f"
+
+[[keyboard.bindings]]
+key = "PageUp"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollPageUp"
+
+[[keyboard.bindings]]
+key = "PageDown"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollPageDown"
+
+[[keyboard.bindings]]
+key = "Home"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollToTop"
+
+[[keyboard.bindings]]
+key = "End"
+mods = "Shift"
+mode = "~Alt"
+action = "ScrollToBottom"
+
+[[keyboard.bindings]]
+key = "V"
+mods = "Control|Shift"
+action = "Paste"
+
+[[keyboard.bindings]]
+key = "C"
+mods = "Control|Shift"
+action = "Copy"
+
+[[keyboard.bindings]]
+key = "F"
+mods = "Control|Shift"
+action = "SearchForward"
+
+[[keyboard.bindings]]
+key = "B"
+mods = "Control|Shift"
+action = "SearchBackward"
+
+[[keyboard.bindings]]
+key = "Key0"
+mods = "Control"
+action = "ResetFontSize"
+
+# ===============================
+# GENERAL
+# ===============================
+[general]
+live_config_reload = true
+working_directory = "None"
+
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
